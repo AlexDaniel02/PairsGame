@@ -1,0 +1,31 @@
+﻿<Window x:Class="PairsGame.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PairsGame"
+        mc:Ignorable="d"
+        Background="Lavender"
+        FontFamily="Arial"
+        Title="SettingsWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="150"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" Margin="10">
+            <TextBlock Text="Select board size:" Margin="0,0,0,10"/>
+            <RadioButton x:Name="fourByFourRadioButton" GroupName="boardSize" Content="4x4" Margin="0,0,0,5"/>
+            <RadioButton x:Name="sixBySixRadioButton" GroupName="boardSize" Content="6x6" Margin="0,0,0,5"/>
+            <RadioButton x:Name="eightByEightRadioButton" GroupName="boardSize" Content="8x8" Margin="0,0,0,5"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" Grid.ColumnSpan="2">
+            <Button x:Name="okButton" Content="OK" Width="75" Height="50" Margin="35,0,0,0" Click="okButton_Click" Grid.Column="0" Background="SlateBlue"/>
+            <Button x:Name="cancelButton" Content="Cancel" Width="75" Height="50" Margin="40,0,0,0" Click="cancelButton_Click" Grid.Column="1"  Background="SlateBlue"/>
+        </StackPanel>
+    </Grid>
+</Window>
